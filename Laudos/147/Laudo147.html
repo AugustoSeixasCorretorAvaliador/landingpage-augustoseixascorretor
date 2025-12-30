@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Verificação de Autenticidade – Laudo Avaliação</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+        color: #003366;
+        margin-bottom: 10px;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+    button {
+        background: #003366;
+        color: white;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    button:hover {
+        background: #002244;
+    }
+
+    .box {
+        background: #eef3f9;
+        border-left: 4px solid #003366;
+        padding: 15px;
+        margin-top: 25px;
+        border-radius: 6px;
+    }
+
+    .success {
+        color: #0a8020;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    a.pdf-btn {
+        display: inline-block;
+        margin-top: 10px;
+        background: #003366;
+        padding: 14px;
+        border-radius: 6px;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    a.pdf-btn:hover {
+        background: #002244;
+    }
+</style>
+
+<script>
+function validarLaudo() {
+    const senha = document.getElementById("senha").value;
+
+    if (senha === "147") {
+        document.getElementById("resultado").style.display = "block";
+        document.getElementById("erro").style.display = "none";
+    } else {
+        document.getElementById("erro").style.display = "block";
+        document.getElementById("resultado").style.display = "none";
+    }
+}
+</script>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Verificação de Autenticidade – Laudo de Avaliação</h1>
+
+    <div class="input-group">
+        <label>Digite a senha de verificação:</label>
+        <input type="password" id="senha" placeholder="Digite a senha">
+    </div>
+
+    <button onclick="validarLaudo()">Validar</button>
+
+    <p id="erro" style="display:none; color:red; margin-top:15px;">
+        ❌ Senha incorreta. Tente novamente.
+    </p>
+
+    <!-- RESULTADO -->
+    <div id="resultado" style="display:none;">
+        <p class="success">✔ Laudo Validado com Sucesso</p>
+
+        <div class="box">
+            <h2>Dados do Avaliador</h2>
+            <p><b>José Augusto dos Santos Seixas</b><br>
+            Avaliador Imobiliário – CRECI-RJ 105921-F<br>
+            Especialista em Avaliação - (CRECI Ed.310)</p>
+        </div>
+
+        <div class="box">
+            <h2>Dados do Laudo</h2>
+            <p><b>Número:</b> LAUDO-ICARAÍ-147-2025-SPOLETO<br>
+               <b>Imóvel Avaliado:</b> Loja térrea – Rua Gen. Pereira da Silva, 147 – Icaraí – Niterói/RJ<br>
+               <b>Ano:</b> 2025</p>
+        </div>
+
+        <div class="box">
+            <h2>Conclusão  (Resumo)</h2>
+
+            <p><b>Valor locativo justo (2025):</b> R$ 14.000 a R$ 17.500</p>
+            <p><b>Valor máximo técnico recomendável:</b> R$ 18.000</p>
+
+            <p><b>Tentativa de reajuste para R$ 30.000:</b><br>
+            O valor pleiteado pelo proprietário, manifestado na intenção de majorar de forma incompatível o valor do aluguel, produziria o efeito econômico de antecipar e compensar impactos tributários futuros.</p>
+        </div>
+
+        <div class="box">
+            <h2>Download do Laudo em PDF</h2>
+            <a class="pdf-btn" href="Laudo_Avaliacao_Jose_Augusto.pdf" target="_blank">
+                📄 Baixar Laudo de Avaliação Completo (PDF)
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+# ---------------------------------------------------------
+# SEGURANÇA DO DOMÍNIO (MANTER!)
+# ---------------------------------------------------------
+http://www.augustoseixascorretor.com.br/*      https://augustoseixascorretor.com.br/:splat    301!
+http://augustoseixascorretor.com.br/*          https://augustoseixascorretor.com.br/:splat    301!
+https://www.augustoseixascorretor.com.br/*     https://augustoseixascorretor.com.br/:splat    301!
+
+# ---------------------------------------------------------
+# AJUSTE DE CAMINHO /laudos/147 → /Laudos/147/
+# (trata quem escrever em minúsculo)
+# ---------------------------------------------------------
+/laudos/147      /Laudos/147/     301
+/laudos/147/     /Laudos/147/     301
+
+# ---------------------------------------------------------
+# URL AMIGÁVEL PARA HTML LAUDO 147
+# ---------------------------------------------------------
+/laudos/147/laudo147       /Laudos/147/Laudo147.html     200
+/Laudos/147/laudo147       /Laudos/147/Laudo147.html     200
+/laudos/147/Laudo147.html  /Laudos/147/Laudo147.html     200
+
+# ---------------------------------------------------------
+# PDF DO LAUDO
+# ---------------------------------------------------------
+/laudos/147/Laudo_Avaliacao_Jose_Augusto.pdf    /Laudos/147/Laudo_Avaliacao_Jose_Augusto.pdf   200
+/Laudos/147/Laudo_Avaliacao_Jose_Augusto.pdf    /Laudos/147/Laudo_Avaliacao_Jose_Augusto.pdf   200
